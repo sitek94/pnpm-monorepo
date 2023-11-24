@@ -5,7 +5,7 @@
     "build": "nest build",
     "develop": "nest start --watch",
     "develop:debug": "nest start --debug --watch",
-    "start": "node dist/main",
+    "start": "node build/main",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
