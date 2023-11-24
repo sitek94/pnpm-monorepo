@@ -10,7 +10,7 @@ async function bootstrap() {
   const configService = app.get(ConfigService)
   const port = configService.get('PORT')
 
-  await app.listen(port || 3000)
+  await app.listen(port || 2222)
 
   logger.log(`Nest application running on port ${port}`)
 }
