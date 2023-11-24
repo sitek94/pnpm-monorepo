@@ -14,6 +14,12 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:prettier/recommended',
   ],
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/internal-regex': '^~/',
+  },
   rules: {
     'import/order': [
       'error',
