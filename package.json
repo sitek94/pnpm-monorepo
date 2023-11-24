@@ -1,0 +1,15 @@
+{
+  "name": "pnpm-monorepo",
+  "private": true,
+  "scripts": {
+    "develop:nestjs": "pnpm --filter nestjs develop",
+    "develop:remix": "pnpm --filter remix develop"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": "8"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0"
+  }
+}
