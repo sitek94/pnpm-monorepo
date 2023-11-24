@@ -2,8 +2,15 @@
   "name": "pnpm-monorepo",
   "private": true,
   "scripts": {
-    "develop:nestjs": "pnpm --filter nestjs develop",
-    "develop:remix": "pnpm --filter remix develop"
+    "develop": "pnpm --F './apps/**' develop",
+    "develop:nestjs": "pnpm --F nestjs develop",
+    "develop:remix": "pnpm --F remix develop",
+    "build": "pnpm --F './apps/**' build",
+    "build:nestjs": "pnpm --F nestjs build",
+    "build:remix": "pnpm --F remix build",
+    "start": "pnpm --F './apps/**' start",
+    "start:nestjs": "pnpm --F nestjs start",
+    "start:remix": "pnpm --F remix start"
   },
   "engines": {
     "node": ">=20",

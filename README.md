@@ -11,3 +11,4 @@
 - [ ] create CI deployment workflow (Fly.io?)
 - [ ] create shared ui lib
 - [ ] setup Storybook in shared ui lib
+- [ ] set unified path aliases for all apps and shared libs
