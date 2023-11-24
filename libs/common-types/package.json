@@ -1,5 +1,5 @@
 {
-  "name": "common-types",
+  "name": "@company/types",
   "private": true,
   "main": "index.ts",
   "devDependencies": {
