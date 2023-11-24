@@ -1,11 +1,11 @@
 import axios from 'axios'
 
+import type { Cat } from 'common-types'
+
 const client = axios.create({
   baseURL: process.env.API_URL,
 })
 
 export const catsApi = {
-  getAll: () =>
-    // TODO: Use shared types library
-    client.get<{ name: string; age: number; breed: string }[]>('/cats'),
+  getAll: () => client.get<Cat[]>('/cats'),
 }

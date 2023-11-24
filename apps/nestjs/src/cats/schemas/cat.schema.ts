@@ -1,10 +1,15 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose'
 import { HydratedDocument } from 'mongoose'
 
+import { Cat as CatInterface } from 'common-types'
+
 export type CatDocument = HydratedDocument<Cat>
 
 @Schema()
-export class Cat {
+export class Cat implements CatInterface {
+  @Prop()
+  _id: string
+
   @Prop()
   name: string
 
