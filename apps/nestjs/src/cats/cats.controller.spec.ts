@@ -1,7 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing'
+
 import { CatsController } from './cats.controller'
-import { CreateCatDto } from './dto/create-cat.dto'
 import { CatsService } from './cats.service'
+import { CreateCatDto } from './dto/create-cat.dto'
 
 describe('Cats Controller', () => {
   let controller: CatsController

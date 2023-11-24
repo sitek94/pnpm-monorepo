@@ -10,13 +10,29 @@
     "build:remix": "pnpm --F remix build",
     "start": "pnpm --F './apps/**' start",
     "start:nestjs": "pnpm --F nestjs start",
-    "start:remix": "pnpm --F remix start"
+    "start:remix": "pnpm --F remix start",
+    "lint": "eslint --ext .ts,.tsx ./apps ./libs",
+    "lint:fix": "pnpm lint --fix",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jest": "^27.6.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-testing-library": "^6.2.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.2"
   },
   "engines": {
     "node": ">=20",
     "pnpm": "8"
-  },
-  "devDependencies": {
-    "prettier": "^3.0.0"
   }
 }

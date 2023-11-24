@@ -1,0 +1,7 @@
+{
+  "name": "@company/eslint-config",
+  "files": [
+    "base.js",
+    "react.js"
+  ]
+}
