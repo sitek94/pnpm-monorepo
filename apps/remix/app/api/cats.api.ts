@@ -1,6 +1,5 @@
+import type { Cat } from '@company/types'
 import axios from 'axios'
-
-import type { Cat } from '../../../../libs/types'
 
 const client = axios.create({
   baseURL: process.env.API_URL || 'http://localhost:2222',
