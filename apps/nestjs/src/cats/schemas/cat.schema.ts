@@ -1,4 +1,4 @@
-import { Cat as CatInterface } from '@company/types'
+import { Cat as CatInterface } from '../../../../../libs/types'
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose'
 import { HydratedDocument } from 'mongoose'
 
