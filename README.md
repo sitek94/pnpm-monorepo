@@ -21,6 +21,7 @@
 - [x] add unused imports plugin to eslint
 - [ ] research if it's worth using `turbo`
 - [ ] create diagram
+- [ ] setup renovate
 
 ## References
 
@@ -29,3 +30,4 @@
 - https://github.com/sveltejs/kit/tree/master
 - https://github.com/nestjs/nest/tree/master/sample
 - https://fly.io/docs/reference/configuration/#the-processes-section
+- https://storybook.js.org/tutorials/design-systems-for-developers/react/en/architecture/

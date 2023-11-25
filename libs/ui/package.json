@@ -2,13 +2,27 @@
   "name": "@company/ui",
   "private": true,
   "main": "index.ts",
-  "devDependencies": {
-    "@company/eslint-config": "workspace:*",
-    "@types/react": "^18.2.20",
-    "typescript": "^5.3.2"
+  "scripts": {
+    "storybook:run": "storybook dev -p 6006",
+    "storybook:build": "storybook build"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@company/eslint-config": "workspace:*",
+    "@storybook/addon-essentials": "^7.5.3",
+    "@storybook/addon-interactions": "^7.5.3",
+    "@storybook/addon-links": "^7.5.3",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.5.3",
+    "@storybook/react": "^7.5.3",
+    "@storybook/react-vite": "^7.5.3",
+    "@storybook/testing-library": "^0.2.2",
+    "@types/react": "^18.2.38",
+    "eslint-plugin-storybook": "^0.6.15",
+    "storybook": "^7.5.3",
+    "typescript": "^5.3.2"
   }
 }

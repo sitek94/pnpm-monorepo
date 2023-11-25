@@ -2,9 +2,8 @@
 export default {
   ignoredRouteFiles: ['**/.*'],
 
-  // appDirectory: "app",
-  // assetsBuildDirectory: "public/build",
-  // publicPath: "/build/",
-  // serverBuildPath: "build/index.js",
+  // Bundle UI lib, so that it's not necessary to include build step within the lib itself.
   serverDependenciesToBundle: ['@company/ui'],
+  // Restart server when UI lib changes
+  watchPaths: ['../../libs/ui/**/*'],
 }
