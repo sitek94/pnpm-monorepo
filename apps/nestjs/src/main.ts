@@ -8,9 +8,9 @@ async function bootstrap() {
   const logger = new Logger('NestApplication')
   const app = await NestFactory.create(AppModule)
   const configService = app.get(ConfigService)
-  const port = configService.get('PORT')
+  const port = configService.get('app.port')
 
-  await app.listen(port || 2222)
+  await app.listen(port)
 
   logger.log(`Nest application running on port ${port}`)
 }

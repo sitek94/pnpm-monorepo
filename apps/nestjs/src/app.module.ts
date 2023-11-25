@@ -12,7 +12,7 @@ import { appConfig } from '~/config/app.config'
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: (configService: ConfigService) => ({
-        uri: configService.get('MONGO_URI'),
+        uri: configService.get('app.mongoUri'),
       }),
       inject: [ConfigService],
     }),

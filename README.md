@@ -4,11 +4,11 @@
 
 - [x] move linters and shared packages to root
 - [x] extend `tsconfig.json` from root based on app
-- [ ] create Dockerfile for NestJS
+- [x] create simple Dockerfile for NestJS
   - Pnpm docs: https://pnpm.io/docker
   - use pnpm deploy
   - make sure to copy from root tsconfig package.json etc
-- [ ] create Dockerfile for Remix
+- [ ] create simple Dockerfile for Remix
 - [ ] update docker compose
 - [x] create CI workflow (lint + build only)
 - [ ] add simple tests to CI workflow

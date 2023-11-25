@@ -10,9 +10,11 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
 RUN pnpm build:nestjs
 RUN pnpm deploy --filter=nestjs --prod /prod/nestjs
 
-FROM base
-COPY --from=build /prod/nestjs /prod/nestjs
+FROM node:20-alpine
+COPY --from=build /prod/nestjs/node_modules /prod/nestjs/node_modules
+COPY --from=build /prod/nestjs/build /prod/nestjs/build
+
 WORKDIR /prod/nestjs
-EXPOSE 3000
-CMD [ "pnpm", "start" ]
+
+CMD [ "node", "build/main.js" ]
 
