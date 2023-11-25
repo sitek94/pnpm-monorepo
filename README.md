@@ -12,9 +12,11 @@
 - [x] manually deploy to Fly.io
 - [x] create CI deployment workflow to Fly.io
 - [x] improve CI deployment workflow to trigger only for changed apps
+- [ ] run typecheck, lint, test and build in parallel
 - [ ] create shared ui lib
 - [ ] setup Storybook in shared ui lib
 - [x] set unified path aliases for all apps and shared libs (done for `apps/`, because `libs/` probably don't need them anyway)
+- [ ] add unused imports plugin to eslint
 
 ## References
 

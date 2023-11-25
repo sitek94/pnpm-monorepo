@@ -7,11 +7,13 @@ import { appConfig } from '~/config/app.config'
 
 import { AppController } from './app.controller'
 import { AppService } from './app.service'
+import { DogsModule } from './dogs/dogs.module'
 
 @Module({
   imports: [
     CatsModule,
     ConfigModule.forRoot({ isGlobal: true, load: [appConfig] }),
+    DogsModule,
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: (configService: ConfigService) => ({

@@ -11,4 +11,12 @@ module.exports = {
       },
     },
   },
+  overrides: [
+    {
+      files: ['jest.config.js', 'jest-e2e.config.js'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+  ],
 }

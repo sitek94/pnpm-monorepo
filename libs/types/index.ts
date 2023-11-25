@@ -4,3 +4,8 @@ export type Cat = {
   age: number
   breed: string
 }
+
+export type Dog = {
+  _id: string
+  name: string
+}
