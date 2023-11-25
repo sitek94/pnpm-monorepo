@@ -5,6 +5,8 @@ import { MongooseModule } from '@nestjs/mongoose'
 import { CatsModule } from '~/cats/cats.module'
 import { appConfig } from '~/config/app.config'
 
+import { AppController } from './app.controller'
+
 @Module({
   imports: [
     CatsModule,
@@ -17,5 +19,6 @@ import { appConfig } from '~/config/app.config'
       inject: [ConfigService],
     }),
   ],
+  controllers: [AppController],
 })
 export class AppModule {}
