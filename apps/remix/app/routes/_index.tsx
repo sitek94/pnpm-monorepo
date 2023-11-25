@@ -24,7 +24,7 @@ export default function Index() {
   const { cats } = useLoaderData<typeof loader>()
 
   return (
-    <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.8' }}>
+    <div className="text-prose m-4">
       <h1>PNPM MONOREPO</h1>
       <hr />
       <h2>Cats fetched from NestJS</h2>

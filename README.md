@@ -13,7 +13,7 @@
 - [x] create CI deployment workflow to fly.io
 - [x] improve CI deployment workflow to trigger only for changed apps
 - [x] run typecheck, lint, test and build in parallel
-- [ ] setup tailwindcss in remix
+- [x] setup tailwindcss in remix
 - [ ] create shared ui lib
 - [ ] setup Storybook in shared ui lib
 - [ ] (?) build and deploy Storybook to fly.io
