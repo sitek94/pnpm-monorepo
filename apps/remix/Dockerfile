@@ -11,23 +11,24 @@ FROM base AS build
 COPY . /usr/src/app
 WORKDIR /usr/src/app
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
-RUN pnpm build:nestjs
-RUN pnpm deploy --filter=nestjs --prod /prod/nestjs
+RUN pnpm build:remix
+RUN pnpm deploy --filter=remix --prod /prod/remix
 
 # Stage 3: Production
 # Copy the built app and run it
 FROM node:20-alpine AS production
 
 ENV NODE_ENV=production
-ENV PORT=2222
+ENV PORT=3333
 
-WORKDIR /prod/nestjs
+WORKDIR /prod/remix
 
-COPY --from=build /prod/nestjs/node_modules ./node_modules
-COPY --from=build /prod/nestjs/build ./build
-
+COPY --from=build /prod/remix/node_modules ./node_modules
+COPY --from=build /prod/remix/build ./build
+COPY --from=build /prod/remix/public ./public
+COPY --from=build /prod/remix/package.json ./package.json
 
 USER node
 
-CMD [ "node", "build/main.js" ]
+CMD [ "npm", "run", "start" ]
 
