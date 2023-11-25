@@ -6,9 +6,6 @@
 app = "pnpm-monorepo-nestjs"
 primary_region = "waw"
 
-[build]
-  dockerfile = "./apps/nestjs/Dockerfile"
-
 [http_service]
   internal_port = 2222
   force_https = true

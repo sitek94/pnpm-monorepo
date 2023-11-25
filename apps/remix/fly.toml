@@ -6,9 +6,6 @@
 app = "pnpm-monorepo-remix"
 primary_region = "waw"
 
-[build]
-  dockerfile = "./apps/remix/Dockerfile"
-
 [http_service]
   internal_port = 3333
   force_https = true
