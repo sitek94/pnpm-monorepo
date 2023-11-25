@@ -1,7 +1,30 @@
 services:
+  nestjs:
+    build:
+      context: .
+      dockerfile: ./apps/nestjs/Dockerfile
+    ports:
+      - 2222:2222
+    environment:
+      MONGO_URI: mongodb://mongo:27017/db
+    depends_on:
+      - mongo
+    networks:
+      - app-network
+
   mongo:
     image: mongo:latest
     container_name: mongodb
     restart: always
     ports:
       - 27017:27017
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - app-network
+
+networks:
+  app-network:
+
+volumes:
+  mongo-data:

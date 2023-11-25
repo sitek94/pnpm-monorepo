@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common'
-import { ConfigModule } from '@nestjs/config'
+import { ConfigModule, ConfigService } from '@nestjs/config'
 import { MongooseModule } from '@nestjs/mongoose'
 
 import { CatsModule } from '~/cats/cats.module'
@@ -9,7 +9,13 @@ import { appConfig } from '~/config/app.config'
   imports: [
     CatsModule,
     ConfigModule.forRoot({ isGlobal: true, load: [appConfig] }),
-    MongooseModule.forRoot('mongodb://localhost:27017/db'),
+    MongooseModule.forRootAsync({
+      imports: [ConfigModule],
+      useFactory: (configService: ConfigService) => ({
+        uri: configService.get('MONGO_URI'),
+      }),
+      inject: [ConfigService],
+    }),
   ],
 })
 export class AppModule {}
