@@ -6,7 +6,6 @@ export type CatDocument = HydratedDocument<Cat>
 
 @Schema()
 export class Cat implements CatInterface {
-  @Prop()
   _id: string
 
   @Prop()

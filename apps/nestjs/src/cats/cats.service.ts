@@ -9,7 +9,14 @@ import { Cat } from './schemas/cat.schema'
 export class CatsService {
   constructor(@InjectModel(Cat.name) private readonly catModel: Model<Cat>) {}
 
-  async create(createCatDto: CreateCatDto): Promise<Cat> {
+  async create(
+    createCatDto: CreateCatDto | CreateCatDto[],
+  ): Promise<Cat | Cat[]> {
+    if (Array.isArray(createCatDto)) {
+      const createdCats = await this.catModel.insertMany(createCatDto)
+      return createdCats
+    }
+
     const createdCat = await this.catModel.create(createCatDto)
     return createdCat
   }
