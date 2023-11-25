@@ -11,9 +11,13 @@ export const meta: MetaFunction = () => {
 }
 
 export const loader = async () => {
-  const { data: cats } = await catsApi.getAll()
-
-  return json({ cats })
+  try {
+    const { data: cats } = await catsApi.getAll()
+    return json({ cats })
+  } catch (error) {
+    console.log(`Error fetching cats: ${error}`)
+    return json({ cats: [] })
+  }
 }
 
 export default function Index() {
