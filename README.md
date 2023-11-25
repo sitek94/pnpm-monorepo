@@ -12,7 +12,7 @@
 - [x] manually deploy to fly.io
 - [x] create CI deployment workflow to fly.io
 - [x] improve CI deployment workflow to trigger only for changed apps
-- [ ] run typecheck, lint, test and build in parallel
+- [x] run typecheck, lint, test and build in parallel
 - [ ] setup tailwindcss in remix
 - [ ] create shared ui lib
 - [ ] setup Storybook in shared ui lib
@@ -20,6 +20,7 @@
 - [x] set unified path aliases for all apps and shared libs (done for `apps/`, because `libs/` probably don't need them anyway)
 - [x] add unused imports plugin to eslint
 - [ ] research if it's worth using `turbo`
+- [ ] create diagram
 
 ## References
 
