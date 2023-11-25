@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-// Based on Kent's repo:
-// https://github.com/kentcdodds/kentcdodds.com/tree/main
+/* Based on Kent's repo: https://github.com/kentcdodds/kentcdodds.com/tree/main */
 @layer utilities {
   .bg-primary {
     @apply bg-white dark:bg-gray-900;

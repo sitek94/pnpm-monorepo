@@ -6,7 +6,7 @@ import type { Config } from 'tailwindcss'
 import tailwindColors from 'tailwindcss/colors'
 
 export default {
-  content: ['./app/**/*.{js,jsx,ts,tsx}'],
+  content: ['./app/**/*.{js,jsx,ts,tsx}', '../../libs/ui/**/*.{js,jsx,ts,tsx}'],
   darkMode: 'class',
   theme: {
     extend: {

@@ -9,6 +9,7 @@
     "start": "remix-serve ./build/index.js"
   },
   "dependencies": {
+    "@company/ui": "workspace:^",
     "@remix-run/css-bundle": "^2.3.1",
     "@remix-run/node": "^2.3.1",
     "@remix-run/react": "^2.3.1",

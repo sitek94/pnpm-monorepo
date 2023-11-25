@@ -141,6 +141,9 @@ importers:
 
   apps/remix:
     dependencies:
+      '@company/ui':
+        specifier: workspace:^
+        version: link:../../libs/ui
       '@remix-run/css-bundle':
         specifier: ^2.3.1
         version: 2.3.1
@@ -207,6 +210,25 @@ importers:
       '@company/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
+      typescript:
+        specifier: ^5.3.2
+        version: 5.3.2
+
+  libs/ui:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@company/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
+      '@types/react':
+        specifier: ^18.2.20
+        version: 18.2.38
       typescript:
         specifier: ^5.3.2
         version: 5.3.2
