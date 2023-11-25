@@ -25,6 +25,7 @@ export default function Index() {
       <hr />
       <h2>Cats fetched from NestJS</h2>
       <pre>{JSON.stringify(cats, null, 2)}</pre>
+      <p>Test</p>
     </div>
   )
 }
