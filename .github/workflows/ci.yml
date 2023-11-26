@@ -26,7 +26,7 @@ jobs:
         with:
           filters: |
             docs:
-              - 'docs/**'
+              - 'apps/docs/**'
               - 'libs/ui/**'
             nestjs:
               - 'apps/nestjs/**'

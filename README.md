@@ -16,10 +16,10 @@
 - [x] setup tailwindcss in remix
 - [x] create shared ui lib
 - [x] setup Storybook in shared ui lib
-- [ ] (?) build and deploy Storybook
+- [x] build and deploy Storybook
 - [x] set unified path aliases for all apps and shared libs (done for `apps/`, because `libs/` probably don't need them anyway)
 - [x] add unused imports plugin to eslint
-- [ ] research if it's worth using `turbo`
+- [ ] research if it's worth using `turbo` - probably yes, to make it easier to run tasks that depend on each other
 - [ ] create diagram
 - [ ] setup renovate
 
