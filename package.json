@@ -3,6 +3,8 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
+    "build:nestjs": "turbo run build -F nestjs...",
+    "build:remix": "turbo run build -F remix... build",
     "deploy:nestjs": "fly deploy --config ./apps/nestjs/fly.toml --dockerfile ./apps/nestjs/Dockerfile",
     "deploy:remix": "fly deploy --config ./apps/remix/fly.toml --dockerfile ./apps/remix/Dockerfile",
     "develop:docs": "turbo run develop --filter docs",
