@@ -4,6 +4,7 @@ dist
 build
 public/build
 .next
+**/*.tsbuildinfo
 
 ## Monorepo
 .turbo
