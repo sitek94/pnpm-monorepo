@@ -1,10 +1,16 @@
 import type { Cat } from '@repo/types'
-import axios from 'axios'
 
-const client = axios.create({
-  baseURL: process.env.API_URL || 'http://localhost:2222',
-})
+const BASE_URL = process.env.API_URL || 'http://localhost:2222'
 
-export const catsApi = {
-  getAll: () => client.get<Cat[]>('/cats'),
+interface CatsApi {
+  getAll: () => Promise<Cat[]>
+}
+
+export const catsApi: CatsApi = {
+  getAll: async () => {
+    const response = await fetch(`${BASE_URL}/cats`)
+    const data: unknown = await response.json()
+
+    return data as Cat[]
+  },
 }

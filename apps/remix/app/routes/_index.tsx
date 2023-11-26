@@ -1,7 +1,6 @@
 import { json, type MetaFunction } from '@remix-run/node'
 import { useLoaderData } from '@remix-run/react'
-import { Button } from '@repo/ui'
-import { Card } from '@repo/ui/components/card'
+import { Button, Card } from '@repo/ui'
 
 import { catsApi } from '~/api/cats.api'
 
@@ -14,9 +13,9 @@ export const meta: MetaFunction = () => {
 
 export const loader = async () => {
   try {
-    const { data: cats } = await catsApi.getAll()
+    const cats = await catsApi.getAll()
     return json({ cats })
-  } catch (error) {
+  } catch (error: any) {
     console.log(`Error fetching cats: ${error}`)
     return json({ cats: [] })
   }
@@ -32,7 +31,7 @@ export default function Index() {
       <h2>Cats fetched from NestJS</h2>
       <pre>{JSON.stringify(cats, null, 2)}</pre>
 
-      <Card title="Card component" href="#components">
+      <Card href="#components" title="Card component">
         Imported from internal @repo/ui package
       </Card>
 

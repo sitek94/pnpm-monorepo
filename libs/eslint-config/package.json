@@ -1,7 +1,9 @@
 {
   "name": "@repo/eslint-config",
-  "files": [
-    "base.js",
-    "react.js"
-  ]
+  "devDependencies": {
+    "@vercel/style-guide": "^5.1.0",
+    "eslint-config-turbo": "^1.10.16",
+    "eslint-plugin-only-warn": "^1.1.0",
+    "eslint-plugin-storybook": "^0.6.15"
+  }
 }

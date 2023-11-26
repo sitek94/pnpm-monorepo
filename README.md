@@ -73,3 +73,4 @@ pnpm develop:remix
 - https://github.com/storybookjs/storybook
 - https://storybook.js.org/tutorials/design-systems-for-developers/react/en/architecture/
 - https://turbo.build/repo/docs/getting-started/existing-monorepo
+- https://github.com/vercel/style-guide/tree/canary

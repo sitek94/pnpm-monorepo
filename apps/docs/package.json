@@ -6,7 +6,7 @@
     "build": "storybook build -o build",
     "start": "serve build",
     "clean": "rm -rf .turbo && rm -rf node_modules",
-    "lint": "eslint ./stories/*.stories.tsx --max-warnings 0"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@repo/ui": "workspace:*",

@@ -7,7 +7,7 @@ export const Button = ({ children, ...props }: ButtonProps) => {
   return (
     <button
       type="button"
-      className="rounded-md bg-indigo-500 px-4 py-2 text-white"
+      className="rounded-md bg-red-500 px-4 py-2 text-white"
       {...props}
     >
       {children}
