@@ -1,8 +1,20 @@
 {
-  "extends": "@repo/tsconfig/nest.json",
   "include": ["**/*.ts", "jest.config.js"],
-  "exclude": ["node_modules", "build"],
   "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "outDir": "./build",
+    "incremental": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "noFallthroughCasesInSwitch": false,
+    "resolveJsonModule": true,
     "baseUrl": "./",
     "paths": {
       "~/*": ["./src/*"]
