@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
-    "@company/types": "workspace:*",
+    "@repo/types": "workspace:*",
     "@nestjs/cli": "^10.0.0",
     "@nestjs/schematics": "^10.0.0",
     "@nestjs/testing": "^10.0.0",

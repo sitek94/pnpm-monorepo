@@ -1,4 +1,4 @@
-import { Dog } from '@company/types'
+import { Dog } from '@repo/types'
 import { Injectable } from '@nestjs/common'
 
 @Injectable()

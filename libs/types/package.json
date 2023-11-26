@@ -1,5 +1,5 @@
 {
-  "name": "@company/types",
+  "name": "@repo/types",
   "private": true,
   "main": "index.ts",
   "devDependencies": {

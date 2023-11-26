@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
-    "@company/types": "workspace:*",
+    "@repo/types": "workspace:*",
     "@remix-run/dev": "^2.3.1",
     "@remix-run/eslint-config": "^2.3.1",
     "@repo/tailwind-config": "workspace:^",

@@ -1,4 +1,4 @@
-import type { Cat } from '@company/types'
+import type { Cat } from '@repo/types'
 import axios from 'axios'
 
 const client = axios.create({
