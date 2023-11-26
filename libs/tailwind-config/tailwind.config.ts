@@ -1,7 +1,6 @@
-import typographyPlugin from '@tailwindcss/typography'
 import formsPlugin from '@tailwindcss/forms'
+import typographyPlugin from '@tailwindcss/typography'
 import type { Config } from 'tailwindcss'
-
 import tailwindColors from 'tailwindcss/colors'
 
 export default {

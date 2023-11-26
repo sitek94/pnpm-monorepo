@@ -1,5 +1,18 @@
 {
-  "extends": "@repo/tsconfig/react-app.json",
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": false,
+    "declarationMap": false,
+    "incremental": true,
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "target": "es5",
+    "skipLibCheck": true
+  },
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"]
 }

@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react'
 import { Button } from '@repo/ui'
+import type { Meta, StoryObj } from '@storybook/react'
 
 const meta: Meta<typeof Button> = {
   component: Button,
@@ -9,7 +9,6 @@ const meta: Meta<typeof Button> = {
       options: ['button', 'submit', 'reset'],
     },
   },
-  
 }
 
 export default meta

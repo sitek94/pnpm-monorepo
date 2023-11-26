@@ -43,6 +43,6 @@ lerna-debug.log*
 
 # Misc
 .cache
-
+tsconfig.tsbuildinfo
 
 

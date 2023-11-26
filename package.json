@@ -14,7 +14,7 @@
     "develop:ui": "pnpm -F ui develop",
     "develop": "pnpm -r develop",
     "format": "prettier --write .",
-    "lint:fix": "pnpm lint -fix",
+    "lint:fix": "pnpm lint --fix",
     "lint": "eslint --ext .ts,.tsx ./apps ./libs",
     "start:docs": "pnpm -F docs start",
     "start:nestjs": "pnpm -F nestjs start",
@@ -47,5 +47,6 @@
   "engines": {
     "node": ">=20",
     "pnpm": "8"
-  }
+  },
+  "packageManager": "pnpm@8.10.5"
 }
