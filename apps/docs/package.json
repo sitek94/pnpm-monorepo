@@ -3,8 +3,8 @@
   "type": "module",
   "scripts": {
     "develop": "storybook dev -p 6006",
-    "build": "storybook build --docs",
-    "start": "serve storybook-static",
+    "build": "storybook build -o build",
+    "start": "serve build",
     "clean": "rm -rf .turbo && rm -rf node_modules",
     "lint": "eslint ./stories/*.stories.tsx --max-warnings 0"
   },

@@ -13,6 +13,7 @@ jobs:
     name: 🔍 Detect changes
     runs-on: ubuntu-latest
     outputs:
+      docs: ${{ steps.filter.outputs.docs }}
       nestjs: ${{ steps.filter.outputs.nestjs }}
       remix: ${{ steps.filter.outputs.remix }}
     steps:
@@ -24,12 +25,16 @@ jobs:
         id: filter
         with:
           filters: |
+            docs:
+              - 'docs/**'
+              - 'libs/ui/**'
             nestjs:
               - 'apps/nestjs/**'
               - 'libs/types/**'
             remix:
               - 'apps/remix/**'
-              - 'apps/types/**'
+              - 'libs/types/**'
+              - 'libs/ui/**'
 
   lint:
     name: ⬣ ESLint
@@ -157,7 +162,7 @@ jobs:
         run: pnpm build
 
   deploy-nestjs:
-    name: 🚀 Deploy NestJS App
+    name: 🐯 Deploy NestJS App
     needs: [changes, lint, typecheck, test, e2e, build]
     if: needs.changes.outputs.nestjs == 'true' && github.ref == 'refs/heads/main'
 
@@ -176,7 +181,7 @@ jobs:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 
   deploy-remix:
-    name: 🚀 Deploy Remix App
+    name: 💿 Deploy Remix App
     needs: [changes, lint, typecheck, test, e2e, build]
     if: needs.changes.outputs.remix == 'true' && github.ref == 'refs/heads/main'
 
@@ -193,3 +198,35 @@ jobs:
         run: flyctl deploy --config ./apps/remix/fly.toml --dockerfile ./apps/remix/Dockerfile --remote-only --build-arg COMMIT_SHA=${{ github.sha }}
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+
+  deploy-docs:
+    name: 📜 Deploy Docs
+    needs: [changes, lint, typecheck, test, e2e, build]
+    if: needs.changes.outputs.docs == 'true' && github.ref == 'refs/heads/main'
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.4.0
+        with:
+          version: 8
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: 📥 Install Dependencies
+        run: pnpm install
+
+      - name: 🏗️ Build
+        run: pnpm build:docs
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./apps/docs/build

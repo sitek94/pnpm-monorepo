@@ -16,6 +16,7 @@
     "format": "prettier --write .",
     "lint:fix": "pnpm lint -fix",
     "lint": "eslint --ext .ts,.tsx ./apps ./libs",
+    "start:docs": "pnpm -F docs start",
     "start:nestjs": "pnpm -F nestjs start",
     "start:remix": "pnpm -F remix start",
     "start": "pnpm -r start",
