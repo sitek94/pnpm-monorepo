@@ -13,7 +13,7 @@ export const Primary: Story = {
   render: props => <Card {...props}>Hello</Card>,
   name: 'Card',
   args: {
-    children: 'Some card content',
+    children: 'Some card content!',
     title: 'Card Title',
     href: '#some-link',
   },
