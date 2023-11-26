@@ -164,6 +164,9 @@ jobs:
       - name: 📥 Install Dependencies
         run: pnpm install
 
+      - name: 📦 Build libs
+        run: pnpm build:ui
+
       - name: 🏗️ Build apps
         run: pnpm build:apps
 
