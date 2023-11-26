@@ -58,9 +58,6 @@ jobs:
       - name: 📥 Install Dependencies
         run: pnpm install
 
-      - name: 📦 Build libs
-        run: pnpm build:ui
-
       - name: 🔬 Lint
         run: pnpm lint
 
@@ -85,9 +82,6 @@ jobs:
 
       - name: 📥 Install Dependencies
         run: pnpm install
-
-      - name: 📦 Build libs
-        run: pnpm build:ui
 
       - name: 🔎 Type check
         run: pnpm typecheck
@@ -143,7 +137,7 @@ jobs:
         run: pnpm test:e2e
 
   build:
-    name: 🏗️ Build apps
+    name: 🏗️ Build
     needs: [changes]
     runs-on: ubuntu-latest
     steps:
@@ -164,8 +158,14 @@ jobs:
       - name: 📥 Install Dependencies
         run: pnpm install
 
-      - name: 🏗️ Build apps
-        run: pnpm build:apps
+      - name: 🏗️ Build
+        run: pnpm build
+
+      - uses: actions/upload-artifact@v3
+        if: needs.changes.outputs.docs == 'true'
+        with:
+          name: docs-artifacts
+          path: ./apps/docs/build
 
   deploy-nestjs:
     name: 🐯 Deploy NestJS App
@@ -217,26 +217,15 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2.4.0
+      - name: Download docs artifacts
+        uses: actions/download-artifact@v3
         with:
-          version: 8
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: pnpm
-
-      - name: 📥 Install Dependencies
-        run: pnpm install
-
-      - name: 🏗️ Build
-        run: pnpm build:docs
+          name: docs-artifacts
+          path: ./build
 
       - name: 🚀 Deploy to Chromatic
         uses: chromaui/action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          storybookBuildDir: ./apps/docs/build
+          storybookBuildDir: ./build

@@ -1,5 +1,5 @@
-import { Dog } from '@company/types'
 import { Controller, Get } from '@nestjs/common'
+import type { Dog } from '@repo/types'
 
 import { DogsService } from './dogs.service'
 

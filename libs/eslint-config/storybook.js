@@ -3,8 +3,8 @@ const { resolve } = require('node:path')
 const project = resolve(process.cwd(), 'tsconfig.json')
 
 /*
- * This is a custom ESLint configuration for use a library
- * that utilizes React.
+ * This is a custom ESLint configuration for use with
+ * typescript packages.
  *
  * This config extends the Vercel Engineering Style Guide.
  * For more information, see https://github.com/vercel/style-guide
@@ -13,16 +13,21 @@ const project = resolve(process.cwd(), 'tsconfig.json')
 
 module.exports = {
   extends: [
-    '@vercel/style-guide/eslint/browser',
-    '@vercel/style-guide/eslint/typescript',
-    '@vercel/style-guide/eslint/react',
-    './_base',
-  ].map(require.resolve),
+    'plugin:storybook/recommended',
+    ...[
+      '@vercel/style-guide/eslint/node',
+      '@vercel/style-guide/eslint/typescript',
+      '@vercel/style-guide/eslint/browser',
+      '@vercel/style-guide/eslint/react',
+      './_base',
+    ].map(require.resolve),
+  ],
   parserOptions: {
     project,
   },
   plugins: ['only-warn'],
   globals: {
+    React: true,
     JSX: true,
   },
   settings: {
@@ -32,7 +37,8 @@ module.exports = {
       },
     },
   },
-  // add rules configurations here
+
+  // Custom rules configurations
   rules: {
     'import/no-default-export': 'off',
   },

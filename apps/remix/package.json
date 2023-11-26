@@ -6,25 +6,28 @@
   "scripts": {
     "build": "remix build",
     "develop": "remix dev --manual",
-    "start": "remix-serve ./build/index.js"
+    "start": "remix-serve ./build/index.js",
+    "lint": "eslint . ",
+    "lint:fix": "pnpm lint --fix",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@remix-run/css-bundle": "^2.3.1",
     "@remix-run/node": "^2.3.1",
     "@remix-run/react": "^2.3.1",
     "@remix-run/serve": "^2.3.1",
-    "@repo/ui": "workspace:^",
-    "axios": "^1.6.2",
+    "@repo/ui": "workspace:*",
     "isbot": "^3.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@company/types": "workspace:*",
     "@remix-run/dev": "^2.3.1",
     "@remix-run/eslint-config": "^2.3.1",
-    "@repo/tailwind-config": "workspace:^",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/tailwind-config": "workspace:*",
+    "@repo/tsconfig": "workspace:^",
+    "@repo/types": "workspace:*",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/forms": "^0.5.7",

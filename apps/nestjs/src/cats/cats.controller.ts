@@ -2,7 +2,7 @@ import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common'
 
 import { CatsService } from './cats.service'
 import { CreateCatDto } from './dto/create-cat.dto'
-import { Cat } from './schemas/cat.schema'
+import type { Cat } from './schemas/cat.schema'
 
 @Controller('cats')
 export class CatsController {
@@ -25,8 +25,6 @@ export class CatsController {
 
   @Delete(':id')
   async delete(@Param('id') id: string) {
-    console.log('id', id)
-
     return this.catsService.delete(id)
   }
 }

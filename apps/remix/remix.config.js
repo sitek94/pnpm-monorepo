@@ -2,8 +2,7 @@
 export default {
   ignoredRouteFiles: ['**/.*'],
 
-  // Bundle UI lib, so that it's not necessary to include build step within the lib itself.
-  // serverDependenciesToBundle: ['@repo/ui'],
-  // Restart server when UI lib changes
+  // Restart server when UI lib changes as described in this discussion:
+  // https://github.com/remix-run/remix/pull/3188
   watchPaths: ['../../libs/ui/**/*'],
 }

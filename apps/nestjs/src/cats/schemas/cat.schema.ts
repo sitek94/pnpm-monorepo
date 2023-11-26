@@ -1,6 +1,6 @@
-import type { Cat as CatInterface } from '@company/types'
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose'
-import { HydratedDocument } from 'mongoose'
+import type { Cat as CatInterface } from '@repo/types'
+import type { HydratedDocument } from 'mongoose'
 
 export type CatDocument = HydratedDocument<Cat>
 

@@ -20,15 +20,17 @@
   "scripts": {
     "build": "tsup",
     "lint": "eslint src/",
+    "lint:fix": "pnpm lint --fix",
     "develop": "tsup --watch",
-    "check-types": "tsc --noEmit"
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:^",
-    "@repo/tailwind-config": "workspace:^",
-    "@repo/tsconfig": "workspace:^",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/tailwind-config": "workspace:*",
+    "@repo/tsconfig": "workspace:*",
     "@types/react": "^18.2.5",
     "autoprefixer": "^10.4.13",
+    "eslint": "^8.54.0",
     "postcss": "^8.4.20",
     "react": "^18.2.0",
     "tailwindcss": "^3.3.5",

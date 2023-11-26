@@ -21,7 +21,10 @@ module.exports = {
   parserOptions: {
     project,
   },
-  plugins: ['only-warn'],
+  env: {
+    browser: true,
+    node: true,
+  },
   globals: {
     JSX: true,
   },
@@ -32,8 +35,11 @@ module.exports = {
       },
     },
   },
+
   // add rules configurations here
   rules: {
     'import/no-default-export': 'off',
+    'no-param-reassign': 'off',
+    'no-console': 'off',
   },
 }

@@ -1,9 +1,15 @@
 {
-  "name": "@company/types",
+  "name": "@repo/types",
   "private": true,
   "main": "index.ts",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "pnpm lint --fix",
+    "typecheck": "tsc --noEmit"
+  },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
+    "@repo/tsconfig": "workspace:^",
     "typescript": "^5.3.2"
   }
 }

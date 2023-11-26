@@ -3,6 +3,10 @@ node_modules
 dist
 build
 public/build
+.next
+
+## Monorepo
+.turbo
 
 # Environment variables
 .env

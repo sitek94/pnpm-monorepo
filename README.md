@@ -19,7 +19,11 @@
 - [x] build and deploy Storybook
 - [x] set unified path aliases for all apps and shared libs (done for `apps/`, because `libs/` probably don't need them anyway)
 - [x] add unused imports plugin to eslint
-- [ ] research if it's worth using `turbo` - probably yes, to make it easier to run tasks that depend on each other
+- [x] research if it's worth using `turbo` - probably yes, to make it easier to run tasks that depend on each other
+- [ ] use turbo repo and ensure the following works
+  - [x] lint, test, build, develop
+  - [ ] gh actions
+  - [ ] deployment
 - [ ] create diagram
 - [ ] setup renovate
 
@@ -31,6 +35,37 @@
 | Remix            | https://pnpm-monorepo-remix.fly.dev/                      |
 | Docs (Storybook) | https://6562c63f0bbf6184dd3b3f1e-aulbjawzef.chromatic.com |
 
+## Getting started
+
+### Pre-requisites
+
+- [pnpm](https://pnpm.io/installation)
+- [Docker](https://docs.docker.com/get-docker/)
+
+### Install dependencies
+
+```sh
+pnpm install
+```
+
+### Database
+
+```sh
+docker compose up mongo
+```
+
+### Run NestJS app
+
+```sh
+pnpm develop:nestjs
+```
+
+### Run Remix app
+
+```sh
+pnpm develop:remix
+```
+
 ## References
 
 - https://pnpm.io/next/filtering
@@ -41,4 +76,5 @@
 - https://github.com/vercel/turbo/tree/main/examples - turbo repo examples
 - https://github.com/storybookjs/storybook
 - https://storybook.js.org/tutorials/design-systems-for-developers/react/en/architecture/
--
+- https://turbo.build/repo/docs/getting-started/existing-monorepo
+- https://github.com/vercel/style-guide/tree/canary
