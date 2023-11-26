@@ -9,11 +9,11 @@
     "start": "remix-serve ./build/index.js"
   },
   "dependencies": {
-    "@company/ui": "workspace:^",
     "@remix-run/css-bundle": "^2.3.1",
     "@remix-run/node": "^2.3.1",
     "@remix-run/react": "^2.3.1",
     "@remix-run/serve": "^2.3.1",
+    "@repo/ui": "workspace:^",
     "axios": "^1.6.2",
     "isbot": "^3.6.8",
     "react": "^18.2.0",
@@ -24,6 +24,7 @@
     "@company/types": "workspace:*",
     "@remix-run/dev": "^2.3.1",
     "@remix-run/eslint-config": "^2.3.1",
+    "@repo/tailwind-config": "workspace:^",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/forms": "^0.5.7",

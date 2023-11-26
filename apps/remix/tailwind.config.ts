@@ -1,24 +1,9 @@
-import aspectRatioPlugin from '@tailwindcss/aspect-ratio'
-import containerQueriesPlugin from '@tailwindcss/container-queries'
-import formsPlugin from '@tailwindcss/forms'
-import typographyPlugin from '@tailwindcss/typography'
+import sharedConfig from '@repo/tailwind-config/tailwind.config'
 import type { Config } from 'tailwindcss'
-import tailwindColors from 'tailwindcss/colors'
 
-export default {
-  content: ['./app/**/*.{js,jsx,ts,tsx}', '../../libs/ui/**/*.{js,jsx,ts,tsx}'],
-  darkMode: 'class',
-  theme: {
-    extend: {
-      colors: {
-        gray: tailwindColors.zinc,
-      },
-    },
-  },
-  plugins: [
-    typographyPlugin,
-    formsPlugin,
-    aspectRatioPlugin,
-    containerQueriesPlugin,
-  ],
-} satisfies Config
+const config: Config = {
+  content: ['./app/**/*.{js,jsx,ts,tsx}'],
+  presets: [sharedConfig],
+}
+
+export default config

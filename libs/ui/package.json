@@ -1,28 +1,40 @@
 {
-  "name": "@company/ui",
-  "private": true,
-  "main": "index.ts",
-  "scripts": {
-    "storybook:run": "storybook dev -p 6006",
-    "storybook:build": "storybook build"
+  "name": "@repo/ui",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./components/card": {
+      "import": "./dist/components/card.mjs",
+      "require": "./dist/components/card.js",
+      "types": "./dist/components/card.d.ts"
+    },
+    "./styles.css": "./dist/index.css"
   },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint src/",
+    "develop": "tsup --watch",
+    "check-types": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
   },
   "devDependencies": {
-    "@company/eslint-config": "workspace:*",
-    "@storybook/addon-essentials": "^7.5.3",
-    "@storybook/addon-interactions": "^7.5.3",
-    "@storybook/addon-links": "^7.5.3",
-    "@storybook/addon-onboarding": "^1.0.8",
-    "@storybook/blocks": "^7.5.3",
-    "@storybook/react": "^7.5.3",
-    "@storybook/react-vite": "^7.5.3",
-    "@storybook/testing-library": "^0.2.2",
-    "@types/react": "^18.2.38",
-    "eslint-plugin-storybook": "^0.6.15",
-    "storybook": "^7.5.3",
+    "@repo/tailwind-config": "workspace:^",
+    "@repo/tsconfig": "workspace:^",
+    "@types/react": "^18.2.5",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.20",
+    "react": "^18.2.0",
+    "tailwindcss": "^3.3.5",
+    "tsup": "^6.0.1",
     "typescript": "^5.3.2"
   }
 }

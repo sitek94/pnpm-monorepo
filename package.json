@@ -9,6 +9,7 @@
     "deploy:remix": "fly deploy --config ./apps/remix/fly.toml --dockerfile ./apps/remix/Dockerfile",
     "develop:nestjs": "pnpm -F nestjs develop",
     "develop:remix": "pnpm -F remix develop",
+    "develop:ui": "pnpm -F ui develop",
     "develop": "pnpm -r develop",
     "format": "prettier --write .",
     "lint:fix": "pnpm lint -fix",

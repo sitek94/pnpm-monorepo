@@ -1,6 +1,6 @@
-import { Button, sayHi } from '@company/ui'
 import { json, type MetaFunction } from '@remix-run/node'
 import { useLoaderData } from '@remix-run/react'
+import { Card } from '@repo/ui/components/card'
 
 import { catsApi } from '~/api/cats.api'
 
@@ -24,17 +24,16 @@ export const loader = async () => {
 export default function Index() {
   const { cats } = useLoaderData<typeof loader>()
 
-  sayHi()
-
   return (
-    <div className="text-prose m-4">
+    <div className="m-4">
       <h1>PNPM MONOREPO</h1>
       <hr />
       <h2>Cats fetched from NestJS</h2>
       <pre>{JSON.stringify(cats, null, 2)}</pre>
-      <p>Test 2</p>
 
-      <Button onClick={() => alert('Hello!')}>Button from @company/ui</Button>
+      <Card title="Card component" href="#components">
+        Imported from internal @repo/ui package
+      </Card>
     </div>
   )
 }

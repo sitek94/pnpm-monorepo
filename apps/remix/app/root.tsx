@@ -8,11 +8,13 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react'
+import uiStyles from '@repo/ui/styles.css'
 
-import tailwindStylesheet from '~/styles/tailwind.css'
+import tailwindStyles from '~/styles/tailwind.css'
 
 export const links: LinksFunction = () => [
-  { rel: 'stylesheet', href: tailwindStylesheet },
+  { rel: 'stylesheet', href: tailwindStyles },
+  { rel: 'stylesheet', href: uiStyles },
   ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
 ]
 
