@@ -1,6 +1,6 @@
 import { registerAs } from '@nestjs/config'
 
-export type AppConfig = {
+export interface AppConfig {
   env: 'development' | 'production' | 'test'
   port: number
 }

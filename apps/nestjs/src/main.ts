@@ -8,12 +8,15 @@ async function bootstrap() {
   const logger = new Logger('NestApplication')
   const app = await NestFactory.create(AppModule)
   const configService = app.get(ConfigService)
-  const port = configService.get('app.port')
-  const host = configService.get('app.host')
+  const port = configService.get<string>('app.port')
+  const host = configService.get<string>('app.host')
 
   await app.listen(port, host)
 
   logger.log(`Nest application running on port ${port}`)
 }
 
-bootstrap()
+bootstrap().catch(error => {
+  console.error(error)
+  process.exit(1)
+})

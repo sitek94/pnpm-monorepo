@@ -6,7 +6,9 @@
     "build": "storybook build -o build",
     "start": "serve build",
     "clean": "rm -rf .turbo && rm -rf node_modules",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:fix": "pnpm lint --fix",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@repo/ui": "workspace:*",

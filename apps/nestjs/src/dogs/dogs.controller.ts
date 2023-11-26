@@ -1,7 +1,7 @@
-import { Dog } from '@repo/types'
 import { Controller, Get } from '@nestjs/common'
+import type { Dog } from '@repo/types'
 
-import { DogsService } from './dogs.service'
+import type { DogsService } from './dogs.service'
 
 @Controller('dogs')
 export class DogsController {

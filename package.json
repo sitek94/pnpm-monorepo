@@ -24,7 +24,7 @@
     "test": "pnpm -r test",
     "test:e2e": "pnpm -r test:e2e",
     "test:nestjs": "pnpm -F nestjs test",
-    "typecheck": "tsc -b ."
+    "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
     "@flydotio/dockerfile": "^0.4.11",

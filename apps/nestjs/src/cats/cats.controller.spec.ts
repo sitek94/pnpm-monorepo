@@ -1,8 +1,9 @@
-import { Test, TestingModule } from '@nestjs/testing'
+import type { TestingModule } from '@nestjs/testing'
+import { Test } from '@nestjs/testing'
 
 import { CatsController } from './cats.controller'
 import { CatsService } from './cats.service'
-import { CreateCatDto } from './dto/create-cat.dto'
+import type { CreateCatDto } from './dto/create-cat.dto'
 
 describe('Cats Controller', () => {
   let controller: CatsController
@@ -84,6 +85,7 @@ describe('Cats Controller', () => {
           age: 2,
         },
       ])
+
       expect(service.findAll).toHaveBeenCalled()
     })
   })

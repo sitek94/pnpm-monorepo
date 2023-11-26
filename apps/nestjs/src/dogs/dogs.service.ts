@@ -1,5 +1,5 @@
-import { Dog } from '@repo/types'
 import { Injectable } from '@nestjs/common'
+import type { Dog } from '@repo/types'
 
 @Injectable()
 export class DogsService {

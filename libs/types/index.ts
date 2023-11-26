@@ -1,11 +1,11 @@
-export type Cat = {
+export interface Cat {
   _id: string
   name: string
   age: number
   breed: string
 }
 
-export type Dog = {
+export interface Dog {
   _id: string
   name: string
 }

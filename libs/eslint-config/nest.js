@@ -31,7 +31,7 @@ module.exports = {
     },
   },
   overrides: [
-    // Jest
+    // Jest configs
     {
       files: ['jest.config.js', 'jest-e2e.config.js'],
       rules: {

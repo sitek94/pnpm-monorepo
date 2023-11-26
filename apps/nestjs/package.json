@@ -5,12 +5,15 @@
     "build": "nest build",
     "develop": "nest start --watch",
     "develop:debug": "nest start --debug --watch",
+    "lint": "eslint .",
+    "lint:fix": "pnpm lint --fix",
     "start": "node build/main",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.config.js"
+    "test:e2e": "jest --config ./test/jest-e2e.config.js",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
@@ -23,11 +26,12 @@
     "rxjs": "^7.8.1"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/types": "workspace:*",
     "@nestjs/cli": "^10.0.0",
     "@nestjs/schematics": "^10.0.0",
     "@nestjs/testing": "^10.0.0",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/tsconfig": "workspace:^",
+    "@repo/types": "workspace:*",
     "@types/express": "^4.17.17",
     "@types/jest": "^29.5.2",
     "@types/node": "^20.3.1",
