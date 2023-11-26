@@ -27,7 +27,7 @@ export default function Index() {
 
   return (
     <div className="m-4">
-      <h1>PNPM MONOREPO</h1>
+      <h1 className="text-primary text-4xl font-medium">PNPM MONOREPO</h1>
       <hr />
       <h2>Cats fetched from NestJS</h2>
       <pre>{JSON.stringify(cats, null, 2)}</pre>
