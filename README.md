@@ -20,6 +20,10 @@
 - [x] set unified path aliases for all apps and shared libs (done for `apps/`, because `libs/` probably don't need them anyway)
 - [x] add unused imports plugin to eslint
 - [x] research if it's worth using `turbo` - probably yes, to make it easier to run tasks that depend on each other
+- [ ] use turbo repo and ensure the following works
+  - [x] lint, test, build, develop
+  - [ ] gh actions
+  - [ ] deployment
 - [ ] create diagram
 - [ ] setup renovate
 
