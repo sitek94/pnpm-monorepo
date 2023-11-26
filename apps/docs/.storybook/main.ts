@@ -16,15 +16,6 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
-
-  async viteFinal(config, { configType }) {
-    // Make sure the base path is correct when deploying to GH pages
-    if (configType === 'PRODUCTION') {
-      config.base = '/pnpm-monorepo/'
-    }
-
-    return config
-  },
 }
 
 export default config

@@ -238,7 +238,9 @@ jobs:
       - name: 🏗️ Build
         run: pnpm build:docs
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: 🚀 Deploy to Chromatic
+        uses: chromaui/action@v1
         with:
-          folder: ./apps/docs/build
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          storybookBuildDir: ./apps/docs/build
