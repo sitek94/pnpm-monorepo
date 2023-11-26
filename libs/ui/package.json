@@ -19,7 +19,7 @@
   },
   "scripts": {
     "build": "tsup",
-    "lint": "eslint .",
+    "lint": "eslint src/",
     "lint:fix": "pnpm lint --fix",
     "develop": "tsup --watch",
     "typecheck": "tsc --noEmit"
