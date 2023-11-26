@@ -25,13 +25,11 @@
 
 ## Deployments
 
-<!--  table -->
-
-| App              | URL                                   |
-| ---------------- | ------------------------------------- |
-| NestJS           | https://pnpm-monorepo-nestjs.fly.dev/ |
-| Remix            | https://pnpm-monorepo-remix.fly.dev/  |
-| Docs (Storybook) | fdasfsa                               |
+| App              | URL                                                       |
+| ---------------- | --------------------------------------------------------- |
+| NestJS           | https://pnpm-monorepo-nestjs.fly.dev/                     |
+| Remix            | https://pnpm-monorepo-remix.fly.dev/                      |
+| Docs (Storybook) | https://6562c63f0bbf6184dd3b3f1e-aulbjawzef.chromatic.com |
 
 ## References
 
