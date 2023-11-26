@@ -58,9 +58,6 @@ jobs:
       - name: 📥 Install Dependencies
         run: pnpm install
 
-      - name: 📦 Build libs
-        run: pnpm build:ui
-
       - name: 🔬 Lint
         run: pnpm lint
 
@@ -85,9 +82,6 @@ jobs:
 
       - name: 📥 Install Dependencies
         run: pnpm install
-
-      - name: 📦 Build libs
-        run: pnpm build:ui
 
       - name: 🔎 Type check
         run: pnpm typecheck
