@@ -23,6 +23,16 @@
 - [ ] create diagram
 - [ ] setup renovate
 
+## Deployments
+
+<!--  table -->
+
+| App              | URL                                   |
+| ---------------- | ------------------------------------- |
+| NestJS           | https://pnpm-monorepo-nestjs.fly.dev/ |
+| Remix            | https://pnpm-monorepo-remix.fly.dev/  |
+| Docs (Storybook) | fdasfsa                               |
+
 ## References
 
 - https://pnpm.io/next/filtering

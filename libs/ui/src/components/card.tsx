@@ -11,8 +11,8 @@ export function Card({
 }): JSX.Element {
   return (
     <a
-      className="group block rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-neutral-700 hover:bg-neutral-800/30"
-      href={`${href}?utm_source=create-turbo&utm_medium=with-tailwind&utm_campaign=create-turbo"`}
+      className="border-secondary text-primary group block rounded-lg border border-transparent px-5 py-4 transition-shadow hover:shadow-xl"
+      href={href}
       rel="noopener noreferrer"
       target="_blank"
     >
