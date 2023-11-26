@@ -221,10 +221,11 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: docs-artifacts
+          path: ./build
 
       - name: 🚀 Deploy to Chromatic
         uses: chromaui/action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          storybookBuildDir: ./apps/docs/build
+          storybookBuildDir: ./build
