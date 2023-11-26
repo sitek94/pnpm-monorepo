@@ -26,7 +26,8 @@
     "lint": {
       "dependsOn": ["^build"]
     },
-    "dev": {
+    "develop": {
+      "dependsOn": ["build"],
       "cache": false,
       "persistent": true
     }
