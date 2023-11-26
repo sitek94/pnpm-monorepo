@@ -1,6 +1,6 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
-  extends: ['@company/eslint-config/base', '@company/eslint-config/react'],
+  extends: ['@repo/eslint-config/base', '@repo/eslint-config/react'],
   settings: {
     'import/resolver': {
       typescript: {

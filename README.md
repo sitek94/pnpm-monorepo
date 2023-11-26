@@ -14,9 +14,9 @@
 - [x] improve CI deployment workflow to trigger only for changed apps
 - [x] run typecheck, lint, test and build in parallel
 - [x] setup tailwindcss in remix
-- [ ] create shared ui lib
-- [ ] setup Storybook in shared ui lib
-- [ ] (?) build and deploy Storybook to fly.io
+- [x] create shared ui lib
+- [x] setup Storybook in shared ui lib
+- [ ] (?) build and deploy Storybook
 - [x] set unified path aliases for all apps and shared libs (done for `apps/`, because `libs/` probably don't need them anyway)
 - [x] add unused imports plugin to eslint
 - [ ] research if it's worth using `turbo`
@@ -26,8 +26,11 @@
 ## References
 
 - https://pnpm.io/next/filtering
-- https://github.com/remix-run/indie-stack/tree/main
-- https://github.com/sveltejs/kit/tree/master
-- https://github.com/nestjs/nest/tree/master/sample
-- https://fly.io/docs/reference/configuration/#the-processes-section
+- https://github.com/remix-run/indie-stack/tree/main - remix app example
+- https://github.com/sveltejs/kit/tree/master - svelte kit - pnpm monorepo
+- https://github.com/nestjs/nest/tree/master/sample - nestjs samples
+- https://fly.io/docs/reference/configuration/#the-processes-section - fly.io config
+- https://github.com/vercel/turbo/tree/main/examples - turbo repo examples
+- https://github.com/storybookjs/storybook
 - https://storybook.js.org/tutorials/design-systems-for-developers/react/en/architecture/
+-

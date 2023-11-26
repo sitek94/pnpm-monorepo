@@ -1,5 +1,6 @@
 import { json, type MetaFunction } from '@remix-run/node'
 import { useLoaderData } from '@remix-run/react'
+import { Button } from '@repo/ui'
 import { Card } from '@repo/ui/components/card'
 
 import { catsApi } from '~/api/cats.api'
@@ -34,6 +35,8 @@ export default function Index() {
       <Card title="Card component" href="#components">
         Imported from internal @repo/ui package
       </Card>
+
+      <Button>Button: Imported from internal @repo/ui package</Button>
     </div>
   )
 }

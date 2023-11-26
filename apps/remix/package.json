@@ -20,7 +20,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@company/eslint-config": "workspace:*",
+    "@repo/eslint-config": "workspace:*",
     "@company/types": "workspace:*",
     "@remix-run/dev": "^2.3.1",
     "@remix-run/eslint-config": "^2.3.1",
