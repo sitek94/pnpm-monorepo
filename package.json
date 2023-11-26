@@ -2,9 +2,11 @@
   "name": "pnpm-monorepo",
   "private": true,
   "scripts": {
+    "build:apps": "pnpm -F './apps/**' build",
     "build:docs": "pnpm -F docs build",
     "build:nestjs": "pnpm -F nestjs build",
     "build:remix": "pnpm -F remix build",
+    "build:ui": "pnpm -F ui build",
     "build": "pnpm run -r build",
     "deploy:nestjs": "fly deploy --config ./apps/nestjs/fly.toml --dockerfile ./apps/nestjs/Dockerfile",
     "deploy:remix": "fly deploy --config ./apps/remix/fly.toml --dockerfile ./apps/remix/Dockerfile",
