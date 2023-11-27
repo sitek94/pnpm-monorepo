@@ -15,26 +15,40 @@ export default meta
 
 type Story = StoryObj<typeof Button>
 
-/*
- *👇 Render functions are a framework specific feature to allow you control on how the component renders.
- * See https://storybook.js.org/docs/react/api/csf
- * to learn how to use render functions.
- */
 export const Primary: Story = {
-  render: props => (
-    <Button
-      {...props}
-      onClick={(): void => {
-        // eslint-disable-next-line no-alert -- alert for demo
-        alert('Hello from Turborepo!')
-      }}
-    >
-      Hello
-    </Button>
-  ),
-  name: 'Button',
+  render: props => <Button {...props}>Primary Button</Button>,
   args: {
-    children: 'Hello',
     type: 'button',
+  },
+}
+
+export const Secondary: Story = {
+  render: props => <Button {...props}>Secondary Button</Button>,
+  args: {
+    type: 'button',
+    variant: 'secondary',
+  },
+}
+
+export const Destructive: Story = {
+  render: props => <Button {...props}>Destructive Button</Button>,
+  args: {
+    type: 'button',
+    variant: 'destructive',
+  },
+}
+export const Outline: Story = {
+  render: props => <Button {...props}>Outline Button</Button>,
+  args: {
+    type: 'button',
+    variant: 'outline',
+  },
+}
+
+export const Ghost: Story = {
+  render: props => <Button {...props}>Ghost Button</Button>,
+  args: {
+    type: 'button',
+    variant: 'ghost',
   },
 }

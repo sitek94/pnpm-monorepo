@@ -1,8 +1,8 @@
 import { Card } from '@repo/ui'
 import type { Meta, StoryObj } from '@storybook/react'
 
-const meta: Meta<typeof Card> = {
-  component: Card,
+const meta: Meta<typeof Card.Root> = {
+  component: Card.Root,
 }
 
 export default meta
@@ -10,11 +10,19 @@ export default meta
 type Story = StoryObj<typeof Card>
 
 export const Primary: Story = {
-  render: props => <Card {...props}>Hello</Card>,
-  name: 'Card',
-  args: {
-    children: 'Some card content!',
-    title: 'Card Title',
-    href: '#some-link',
-  },
+  name: 'card',
+  render: () => (
+    <Card.Root>
+      <Card.Header>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Description>Card Description</Card.Description>
+      </Card.Header>
+      <Card.Content>
+        <p>Card Content</p>
+      </Card.Content>
+      <Card.Footer>
+        <p>Card Footer</p>
+      </Card.Footer>
+    </Card.Root>
+  ),
 }

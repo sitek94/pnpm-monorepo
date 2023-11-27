@@ -10,11 +10,6 @@
       "require": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./components/card": {
-      "import": "./dist/components/card.mjs",
-      "require": "./dist/components/card.js",
-      "types": "./dist/components/card.d.ts"
-    },
     "./styles.css": "./dist/index.css"
   },
   "scripts": {
@@ -23,6 +18,13 @@
     "lint:fix": "pnpm lint --fix",
     "develop": "tsup --watch",
     "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "lucide-react": "^0.293.0",
+    "tailwind-merge": "^2.0.0"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

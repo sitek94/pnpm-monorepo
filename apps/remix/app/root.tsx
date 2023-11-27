@@ -12,6 +12,8 @@ import uiStyles from '@repo/ui/styles.css'
 
 import tailwindStyles from '~/styles/tailwind.css'
 
+console.log(uiStyles)
+
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: tailwindStyles },
   { rel: 'stylesheet', href: uiStyles },
@@ -27,7 +29,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="text-primary bg-primary">
+      <body className="text-foreground bg-background">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
