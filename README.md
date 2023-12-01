@@ -1,5 +1,8 @@
 # Pnpm + Turbo Monorepo
 
+> [!WARNING]
+> Production deployments for Remix and NestJS are disabled since I'm not currently working on this and I don't want to waste Fly.io resources for unused projects.
+
 ## TODO
 
 - [x] move linters and shared packages to root
